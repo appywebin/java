@@ -1,0 +1,24 @@
+EXPT 2B
+import java.io.*;
+class compare
+{
+public static void main(String args[])throws IOException
+ {
+ int gr=Integer.MIN_VALUE;
+ int sm=Integer.MAX_VALUE;
+InputStreamReader is = new InputStreamReader(System.in);
+BufferedReader br = new BufferedReader(is);
+System.out.println("Enter the number of value");
+int n = Integer.parseInt(br.readLine());
+System.out.println("Enter" +n+ "values");
+for (int i=1;i<=n;i++)
+{
+ int value=Integer.parseInt(br.readLine());
+ if (value>gr)
+ gr=value;
+ if(value<sm)
+ sm=value;
+}
+System.out.println("The greater value is "+gr);
+System.out.println("The smallest value is "+sm);
+}}

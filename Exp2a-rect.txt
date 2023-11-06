@@ -1,0 +1,33 @@
+//EXP2a
+import java.util.*;
+class rect
+{
+ int l,w,a;
+ public void getdeta()
+{
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter the length & width");
+ l=sc.nextInt();
+ w=sc.nextInt();
+ System.out.println("The Entered length & width "+l + " " +w);
+}
+public void calculate()
+{
+ a=l*w;
+}
+public void display()
+{
+ System.out.println("The area of Rectangle is "+a);
+}}
+class area
+{
+ public static void main (String args[])
+{
+ rect r= new rect();
+ r.getdeta();
+ r.calculate();
+ r.display();
+}}
+
+javac rect.java
+java area

@@ -1,0 +1,42 @@
+Experiment 13
+class Th extends Thread
+{
+ public void run()
+ {
+ Thread t=currentThread();
+ System.out.println("Thread Status:"+isAlive());
+ for(int i=0;i<=5;i++)
+ {
+ try{
+ Thread.sleep(1000);
+ }
+ catch(Exception e){
+
+ }
+ System.out.println(i);
+ }
+
+}}
+public class Mainth1
+{
+ public static void main(String args[])
+ {
+ Th t1 = new Th();
+ Th t2 = new Th();
+ System.out.println("ID :"+t1.getId());
+ System.out.println("Name:"+t1.getName());
+ t1.setName("OOPM");
+ System.out.println("Modified Name:"+t1.getName());
+ System.out.println("Priority : "+t1.getPriority());
+ t1.setPriority(10);
+ System.out.println("Modified Priority: "+t1.getPriority());
+ t1.start();
+ try{
+ t1.join();//Join method in java al;low one thread to wait unbtil another thread completes its
+execution
+ }
+ catch(Exception e){
+ System.out.println("Thread Status: "+t1.isAlive());
+ t2.start();}
+ }
+}

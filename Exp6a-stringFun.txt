@@ -1,0 +1,25 @@
+//Experiment 6A: To demonstrate the string functions:
+class string
+{
+public static void main(String args[])
+{
+String str="Hello I am uday patil,";
+System.out.println("The length of String is "+str.length());
+System.out.println("The Char At of String is "+str.charAt(10));
+System.out.println("The sub Stirngs of String is "+str.substring(0,5));
+String str2="Welcome to the Dept of IoT";
+System.out.println("The Two Strings is "+str.concat(str2));
+System.out.println("The index of String is "+str.indexOf("patil"));
+System.out.println("The Replacement of String is "+str.replace("Hello","Bonjour"));
+System.out.println("The Upper case of String is "+str.toUpperCase());
+System.out.println("The Lower case of String is "+str.toLowerCase());
+System.out.println("The use of trim is "+str.trim());
+String word[]=str2.split(" ");
+for(String words : word)
+{
+System.out.println(words);
+}
+System.out.println("The Start of the sentence is "+str.startsWith("HI"));
+System.out.println("The end of the sentence is "+str2.endsWith("IoT"));
+}
+}

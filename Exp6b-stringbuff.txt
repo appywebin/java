@@ -1,0 +1,16 @@
+Experiment 6b
+class stringbufferexample
+{
+public static void main(String args[])
+{
+StringBuffer str = new StringBuffer("\nVishal Rajendra Sharma");
+System.out.println(str);
+System.out.println("After appending: "+str.append(" Sharma"));
+System.out.println("Capacity of the String: "+str.capacity());
+System.out.println("Length of the String: "+str.length());
+System.out.println("After Deleting: "+str.delete(0,8));
+System.out.println("After replacing: "+str.replace(0,8,"Vishal"));
+System.out.println("Reverse of the String: "+str.reverse());
+System.out.println("After inserting: "+str.insert(0,"O"));
+}
+}

@@ -1,0 +1,27 @@
+//Exp-8A
+class rectangle
+{
+ int l,b;
+ void setval(int x,int y)
+ {
+ l=x;
+ b=y;
+ }
+ int getarea()
+ {return(l*b);}
+}
+class triangle extends rectangle
+{
+ float area(){
+ return (float)(0.5*l*b);}
+}
+class singleinheritance
+{
+ public static void main(String args[])
+ {
+ triangle t = new triangle();
+ t.setval(8,6);
+ System.out.println("Area of rectangle "+t.area());
+ System.out.println("Area of triangle "+t.getarea());
+ }
+}

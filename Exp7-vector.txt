@@ -1,0 +1,25 @@
+Experiment 7
+import java.util.*;
+class vectorexample
+{
+ public static void main(String args[])
+ {
+ Vector<String> name = new Vector<String>();
+ name.add("Vishal");
+ name.add("Aditya");
+ name.add("Shubham");
+ name.add("Amol");
+ name.add("Hitesh");
+ System.out.println("Size: "+ name.size());
+ System.out.println("The name are" + name);
+ Vector<String> newname = new Vector<String>();
+ newname.add("Sahil");
+ name.remove(3);
+ System.out.println("Display after Remove");
+ name.addAll(newname);
+ for(int i=0;i<name.size();i++)
+ {
+ System.out.println(name.get(i));
+ }
+ }
+}

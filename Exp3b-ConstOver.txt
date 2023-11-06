@@ -1,0 +1,50 @@
+EXPT – 3B Constructor Overloading
+class constod
+{
+ float length,width,height;
+ public constod()
+ {
+ System.out.println("Contructor with no parameter");
+ length=3.2f;
+ width=5.8f;
+ height=8.2f;
+ }
+ public constod(float l)
+ {
+ System.out.println("Constructor with one parameter");
+ length=l;
+ width=5.8f;
+ height=8.2f;
+ }
+public constod(float l, float w)
+ {
+ System.out.println("Constructor with two parameter");
+ length=l;
+ width=w;
+ height=8.2f;
+ }
+public constod(float l, float w, float h)
+ {
+ System.out.println("Constructor with three parameter");
+ length=l;
+ width=w;
+ height=h;
+ }
+public void volume()
+{
+ float v = length * width * height;
+ System.out.println("The volume cuboid having length "+length+", width
+"+width+", and height "+height+" is "+v+"\n");
+}
+public static void main(String args[])
+{
+ constod co = new constod();
+ co.volume();
+ constod co1 = new constod(3.2f);
+ co1.volume();
+ constod co2 = new constod(3.2f,5.8f);
+ co2.volume();
+ constod co3 = new constod(3.2f,5.8f,8.2f);
+ co3.volume();
+ }
+ }

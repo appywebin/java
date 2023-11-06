@@ -1,0 +1,32 @@
+Experiment no 10
+abstract class shape
+{
+ abstract void area();
+ abstract void perimeter();
+}
+class rect extends shape
+{
+ float l,b;
+ rect(float x, float y)
+ {
+ l=x;
+ b=y;
+ }
+ public void area()
+ {
+ System.out.println("The area of rectangle is : "+(l*b));
+ }
+ public void perimeter()
+ {
+ System.out.println("The perimeter of rectangle is : "+(l+b));
+ }
+}
+class abstractdemo
+{
+ public static void main(String[] args)
+ {
+ rect r=new rect(5.2f,6.7f);
+ r.area();
+ r.perimeter();
+ }
+}

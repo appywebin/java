@@ -1,0 +1,57 @@
+//Exp-8B
+class worker
+{
+ int c,s;
+ String n;
+ float hra;
+ void setdata(int x, String y, int z)
+ {
+ c=x;
+ n=y;
+ s=z;
+ }
+ void showdetail()
+ {
+ System.out.println("The Code is "+c+" The Name is "+n+" The Salary is "+s);
+ }
+ void gethra()
+ {
+ hra = (float)(0.6*s);
+ System.out.println("The rate of Interst is "+hra);
+ }
+}
+class officer extends worker
+{
+float da;
+ void getda()
+ {
+ da=(float)(0.98*s);
+ System.out.println("The DA is "+da);
+ }
+}
+class manager extends officer
+{
+ float ca;
+ void getca()
+ {
+ ca=(float)(0.2*s);
+ System.out.println("The CA is "+ca);
+ }
+ void getgross()
+ {
+ System.out.println("The gross is "+(s+hra+da+ca));
+ }
+}
+class multiplein
+{
+ public static void main(String args[])
+ {
+ manager m = new manager();
+ m.setdata(52,"vishal", 10000);
+ m.showdetail();
+ m.gethra();
+ m.getda();
+ m.getca();
+ m.getgross();
+ }
+}
